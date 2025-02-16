@@ -49,4 +49,27 @@ body {
   .delete-btn:hover {
     background-color: darkred;
   }
-    
+
+#charts {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 30px; /* 增加圖表之間的距離 */
+    margin-top: 20px;
+}
+
+#categoryChart {
+    width: 300px !important; /* 圓餅圖 */
+    height: 300px !important;
+}
+
+#dailyChart {
+    width: 500px !important; /* 長條圖 */
+    height: 300px !important;
+}
+
+  canvas {
+    max-width: 600px;
+    margin: 20px auto;
+  }
+  

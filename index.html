@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="zh-Hant">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>簡易記帳</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <header>
+    <h1>簡易記帳</h1>
+  </header>
+  
+  <section id="record-form">
+    <h2>新增記錄</h2>
+    <form id="form">
+      <input type="number" id="amount" placeholder="金額" required>
+      <input type="text" id="category" placeholder="類別" required>
+      <input type="date" id="date" required>
+      <button type="submit">提交</button>
+    </form>
+  </section>
+
+  <section id="history">
+    <h2>歷史記錄</h2>
+    <ul id="record-list"></ul>
+  </section>
+
+  <script src="script.js"></script>
+</body>
+</html>

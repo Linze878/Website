@@ -9,36 +9,35 @@
 </head>
 <body>
     <header>
-        <h1>簡易記帳</h1>
+        <h1>簡易記帳工具</h1>
     </header>
 
     <main>
         <!-- **新增記錄區塊** -->
         <section id="record-form">
-            <h2>新增記錄</h2>
+            <h2 style="font-size: 30px">新增記錄</h2>
             <form id="form">
                 <input type="number" id="amount" placeholder="輸入金額" required>
                 <input type="text" id="category" placeholder="輸入類別" required>
                 <input type="date" id="date" required>
-                <button type="submit">新增記錄</button>
+                <button type="submit" class="btn">新增</button>
             </form>
         </section>
 
         <!-- **歷史記錄區塊** -->
         <section id="history">
-            <h2>歷史記錄</h2>
+            <h2 style="font-size: 30px">歷史記錄</h2>
             <ul id="record-list"></ul>
-            <button id="clearAll" style="font-size: 17px; height: 50px; width: 120px">清空所有紀錄</button>
+            <button id="clearAll" class="btn">清空所有紀錄</button>
         </section>
 
-        <!-- **支出分析圖表區塊** -->
-        <section id="charts">
-            <h2>支出分析</h2>
-            <canvas id="categoryChart"></canvas>
-            <canvas id="dailyChart"></canvas>
-        </section>
+    <!-- **支出分析圖表區塊** -->
+    <section id="charts">
+        <h2 style="font-size: 30px">支出分析</h2>
+        <canvas id="categoryChart" style="display:none;"></canvas>
+        <canvas id="dailyChart" style="display:none;"></canvas>
+    </section>
     </main>
-
     <script src="script.js"></script>
 </body>
 </html>

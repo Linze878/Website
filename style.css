@@ -1,75 +1,140 @@
+/* 頁面背景：漸變色讓畫面更現代 */
 body {
-    font-family: Arial, sans-serif;
+    font-family: "Microsoft JhengHei", sans-serif;
     margin: 0;
     padding: 0;
-    background-color: #f4f4f4;
-  }
-  
-  header {
-    background-color: #333;
+    background: linear-gradient(135deg, #89f7fe, #66a6ff);
+}
+
+/* 頁首設計 */
+header {
+    background: rgba(0, 0, 0, 0.636);
     color: white;
-    padding: 10px;
-    text-align: center;
-  }
-  
-  section {
     padding: 20px;
-  }
-  
-  #record-form input,
-  #record-form button {
-    margin: 10px;
-    padding: 8px;
+    text-align: center;
+    font-size: 24px;
+    font-weight: bold;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+}
+
+/* 主要區塊 */
+main {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding: 20px;
+}
+
+/* 卡片風格的區塊 */
+section {
+    background: white;
+    width: 90%;
+    max-width: 600px;
+    padding: 20px;
+    margin: 20px 0;
+    border-radius: 15px;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+    text-align: center;
+}
+
+/* 輸入框美化 */
+input {
+    width: 90%;
+    padding: 10px;
+    margin: 10px 0;
+    border: 2px solid #66a6ff;
+    border-radius: 8px;
     font-size: 16px;
-  }  
-  #history {
-    margin-top: 20px;
-  }
-  
-  #record-list {
+    transition: 0.3s;
+}
+
+input:focus {
+    border-color: #007bff;
+    outline: none;
+    box-shadow: 0 0 8px rgba(0, 123, 255, 0.5);
+}
+
+/* 按鈕美化 */
+.btn {
+    background: #007bff;
+    color: white;
+    padding: 12px 20px;
+    font-size: 18px;
+    border: none;
+    border-radius: 8px;
+    cursor: pointer;
+    transition: all 0.3s ease-in-out;
+}
+
+.btn:hover {
+    background: #0056b3;
+    transform: scale(1.1);
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.3);
+}
+
+/* 記帳紀錄列表 */
+#record-list {
     list-style: none;
     padding: 0;
-  }
-  
-  #record-list li {
+    text-align: left;
+}
+
+#record-list li {
     background: #fff;
-    padding: 10px;
-    margin: 5px 0;
+    padding: 15px;
+    margin: 10px 0;
+    border-radius: 8px;
     border-left: 5px solid #007bff;
     font-size: 18px;
-  }
-  .delete-btn {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    box-shadow: 0 2px 6px rgba(0, 0, 0, 0.1);
+}
+
+/* 刪除按鈕 */
+.delete-btn {
     background-color: red;
     color: white;
     border: none;
     padding: 5px 10px;
     cursor: pointer;
-    margin-left: 10px;
-  }
-  .delete-btn:hover {
-    background-color: darkred;
-  }
+    border-radius: 5px;
+    transition: 0.3s;
+}
 
+.delete-btn:hover {
+    background-color: darkred;
+    transform: scale(1.1);
+}
+
+/* 圖表區塊 */
 #charts {
     display: flex;
     flex-direction: column;
     align-items: center;
-    gap: 30px; /* 增加圖表之間的距離 */
-    margin-top: 20px;
+    gap: 20px;
+    padding: 20px;
+    width: 90%;
+    max-width: 1000px;
+    min-height: 600px;  /* 增加最小高度，確保有足夠空間顯示內容 */
+    color: #333;
 }
 
 #categoryChart {
-    width: 300px !important; /* 圓餅圖 */
-    height: 300px !important;
+    width: 350px !important;
+    height: 350px !important;
 }
 
 #dailyChart {
-    width: 500px !important; /* 長條圖 */
+    width: 600px !important; /* 放大長條圖 */
     height: 300px !important;
 }
 
-  canvas {
-    max-width: 600px;
+canvas {
+    max-width: 100%;
     margin: 20px auto;
-  }
-  
+    border: 1px solid #ccc;
+    border-radius: 10px;
+    background: white;
+}

@@ -70,11 +70,43 @@ main {
     display: flex;
     flex-direction: column;
     align-items: center;
-    padding: 20px;
-    background: rgba(255, 255, 255, 0.9); /* 微透明白色 */
-    border-radius: 20px;
-    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+    padding: 30px;
+    background: linear-gradient(145deg, #f2f7ff, #d8e3f2); /* 淡藍與淡紫的柔和漸變 */
+    background-size: 400% 400%; /* 更大範圍的背景移動 */
+    animation: gradientMove 12s ease infinite; /* 背景移動動畫 */
+    border-radius: 25px;
+    box-shadow: 0 6px 18px rgba(0, 0, 0, 0.12); /* 加強陰影效果 */
+    position: relative;
+    overflow: hidden; /* 防止溢出 */
 }
+
+/* 添加微粒子效果 */
+main::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: url('https://www.transparenttextures.com/patterns/snow.png'); /* 細微雪花粒子效果 */
+    opacity: 0.08; /* 減少粒子強度 */
+    pointer-events: none; /* 禁止與粒子區塊互動 */
+}
+
+/* 內部邊框和發光效果 */
+main::after {
+    content: '';
+    position: absolute;
+    top: 5px;
+    left: 5px;
+    right: 5px;
+    bottom: 5px;
+    border: 1px solid rgba(0, 0, 0, 0.1);
+    border-radius: 20px;
+    pointer-events: none;
+    box-shadow: 0 0 12px rgba(0, 0, 0, 0.15); /* 更細緻的陰影發光 */
+}
+
 
 /* 輸入框美化 */
 input {

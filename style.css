@@ -215,11 +215,10 @@ input:focus {
 
 /* 調整圖表尺寸 */
 #categoryChart, #dailyChart {
-    flex: 1; /* 讓兩個圖表均分空間 */
-    width: 100%;
+    flex: 1;
     max-width: 45%;
-    height: 100%; /* 讓圖表填滿 charts 區塊 */
-    max-height: 250px; /* 限制圖表高度，避免變形 */
+    height: auto; /* 讓高度隨比例縮放 */
+    max-height: 250px; /* 限制圖表最大高度，避免被拉太長 */
     border-radius: 15px;
     box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
     transition: transform 0.3s ease-in-out;

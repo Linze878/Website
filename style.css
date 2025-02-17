@@ -2,20 +2,67 @@ body {
     font-family: "Microsoft JhengHei", sans-serif;
     margin: 0;
     padding: 0;
-    background: linear-gradient(135deg, #B2DFF7, #A4C6E7); /* 柔和的藍綠漸變 */
-    color: #333; /* 深灰色文字 */
+    background: linear-gradient(135deg, #ffafbd, #ffc3a0); /* 粉紅漸變背景 */
+    background-size: 400% 400%; /* 更大範圍的背景移動 */
+    animation: gradientAnimation 15s ease infinite; /* 背景漸變動畫 */
+    color: #333;
+    overflow-x: hidden; /* 防止橫向滾動 */
+}
+
+/* 背景漸變動畫 */
+@keyframes gradientAnimation {
+    0% {
+        background-position: 0% 50%;
+    }
+    50% {
+        background-position: 100% 50%;
+    }
+    100% {
+        background-position: 0% 50%;
+    }
 }
 
 /* 頁首設計 */
 header {
-    background: rgba(22, 32, 53, 0.85); /* 深藍色背景 */
+    background: linear-gradient(135deg, #a8c0ff, #3f72af); /* 漸變的藍色 */
     color: white;
-    padding: 20px;
+    padding: 30px;
     text-align: center;
-    font-size: 24px;
+    font-size: 26px;
     font-weight: bold;
-    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.3);
-    border-bottom: 2px solid #fff; /* 增加頁首分隔線 */
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.3); /* 更強的陰影 */
+    position: relative;
+    z-index: 10;
+    border-bottom: 3px solid #ffffff;
+}
+
+/* 增加動態光暈效果 */
+header::before {
+    content: '';
+    position: absolute;
+    top: -10px;
+    left: -10px;
+    right: -10px;
+    bottom: -10px;
+    background: rgba(255, 255, 255, 0.2);
+    filter: blur(15px);
+    animation: glowEffect 2s infinite ease-in-out;
+    z-index: -1;
+}
+
+@keyframes glowEffect {
+    0% {
+        transform: scale(1);
+        opacity: 0.8;
+    }
+    50% {
+        transform: scale(1.1);
+        opacity: 1;
+    }
+    100% {
+        transform: scale(1);
+        opacity: 0.8;
+    }
 }
 
 /* 主要區塊 */
@@ -25,6 +72,8 @@ main {
     align-items: center;
     padding: 20px;
     background: rgba(255, 255, 255, 0.9); /* 微透明白色 */
+    border-radius: 20px;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
 }
 
 /* 輸入框美化 */
@@ -32,36 +81,36 @@ input {
     width: 90%;
     padding: 12px;
     margin: 12px 0;
-    border: 2px solid #A4C6E7; /* 淺藍色邊框 */
-    border-radius: 10px;
+    border: 2px solid #ff6f61; /* 柔和的珊瑚色 */
+    border-radius: 15px;
     font-size: 16px;
     transition: all 0.3s ease-in-out;
-    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
 }
 
 input:focus {
-    border-color: #007bff; /* 藍色焦點邊框 */
+    border-color: #ff6f61; /* 焦點顏色 */
     outline: none;
-    box-shadow: 0 0 8px rgba(0, 123, 255, 0.5);
+    box-shadow: 0 0 12px rgba(255, 111, 97, 0.6); /* 發光效果 */
 }
 
 /* 按鈕美化 */
 .btn {
-    background: #4A90E2; /* 柔和的藍色 */
+    background: #6a5acd; /* 柔和的紫色 */
     color: white;
     padding: 14px 22px;
     font-size: 18px;
     border: none;
-    border-radius: 8px;
+    border-radius: 15px;
     cursor: pointer;
     transition: all 0.3s ease-in-out;
-    box-shadow: 0 2px 6px rgba(0, 0, 0, 0.2);
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.2);
 }
 
 .btn:hover {
-    background: #357ABD; /* 懸停時更深的藍色 */
+    background: #5a4fb8; /* 懸停時變暗 */
     transform: scale(1.05);
-    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.3);
+    box-shadow: 0 8px 18px rgba(0, 0, 0, 0.3);
 }
 
 /* 記帳紀錄列表 */
@@ -70,45 +119,48 @@ input:focus {
     padding: 0;
     width: 100%;
     max-width: 600px;
+    margin-top: 20px;
 }
 
 #record-list li {
-    background: #f9f9f9; /* 淺灰色背景 */
+    background: #fff;
     padding: 16px;
     margin: 12px 0;
-    border-radius: 10px;
-    border-left: 5px solid #4A90E2; /* 深藍色邊框 */
+    border-radius: 15px;
+    border-left: 8px solid #ff6f61; /* 珊瑚色邊框 */
     font-size: 18px;
     display: flex;
     justify-content: space-between;
     align-items: center;
-    box-shadow: 0 2px 6px rgba(0, 0, 0, 0.1);
+    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+    transform: scale(0.98);
     transition: transform 0.3s ease-in-out;
 }
 
 #record-list li:hover {
-    transform: scale(1.02);
+    transform: scale(1.02); /* 項目懸停放大 */
 }
 
 #record-list li .record-icon {
     margin-right: 10px;
     font-size: 24px;
-    color: #4A90E2; /* 同樣的藍色 */
+    color: #6a5acd; /* 紫色 */
 }
 
 /* 刪除按鈕 */
 .delete-btn {
-    background-color: #D9534F; /* 紅色 */
+    background-color: #d9534f; /* 鮮紅色 */
     color: white;
     border: none;
-    padding: 5px 12px;
+    padding: 6px 14px;
     cursor: pointer;
-    border-radius: 5px;
+    border-radius: 10px;
     transition: all 0.3s ease-in-out;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.15);
 }
 
 .delete-btn:hover {
-    background-color: #C9302C; /* 懸停時更深的紅色 */
+    background-color: #c9302c; /* 深紅色 */
     transform: scale(1.1);
 }
 
@@ -117,25 +169,24 @@ input:focus {
     display: flex;
     flex-direction: column;
     align-items: center;
-    gap: 20px;
-    padding: 20px;
+    gap: 30px;
+    padding: 30px;
     width: 90%;
     max-width: 1000px;
     min-height: 600px;
-    color: #333;
+    background: rgba(255, 255, 255, 0.8);
+    border-radius: 20px;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
 }
 
 #categoryChart, #dailyChart {
-    border-radius: 10px;
-    box-shadow: 0 2px 6px rgba(0, 0, 0, 0.15);
+    border-radius: 15px;
+    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+    transition: transform 0.3s ease-in-out;
 }
 
-canvas {
-    max-width: 100%;
-    margin: 20px auto;
-    border: 1px solid #ccc;
-    border-radius: 10px;
-    background: white;
+#categoryChart:hover, #dailyChart:hover {
+    transform: scale(1.05); /* 當圖表懸停時放大 */
 }
 
 /* 響應式設計 */
@@ -143,8 +194,8 @@ canvas {
 /* 手機 (最大寬度 768px) */
 @media (max-width: 768px) {
     header {
-        font-size: 20px;
-        padding: 15px;
+        font-size: 22px;
+        padding: 18px;
     }
 
     section {
@@ -153,18 +204,18 @@ canvas {
 
     .btn {
         width: 100%;
-        padding: 10px;
+        padding: 12px;
         font-size: 16px;
     }
 
     #record-list li {
         font-size: 16px;
-        padding: 12px;
+        padding: 14px;
     }
 
     #charts {
         width: 100%;
-        padding: 10px;
+        padding: 15px;
     }
 
     #categoryChart, #dailyChart {
@@ -180,8 +231,8 @@ canvas {
 /* 平板（768px 到 1024px） */
 @media (min-width: 768px) and (max-width: 1024px) {
     header {
-        font-size: 22px;
-        padding: 18px;
+        font-size: 24px;
+        padding: 20px;
     }
 
     section {
@@ -189,18 +240,18 @@ canvas {
     }
 
     .btn {
-        padding: 12px 18px;
-        font-size: 17px;
+        padding: 14px 20px;
+        font-size: 18px;
     }
 
     #record-list li {
         font-size: 17px;
-        padding: 14px;
+        padding: 16px;
     }
 
     #charts {
         width: 90%;
-        padding: 15px;
+        padding: 20px;
     }
 
     #categoryChart, #dailyChart {
@@ -208,11 +259,11 @@ canvas {
     }
 }
 
-/* 桌機（最小寬度 1025px） */
+/* 桌面（最小寬度 1025px） */
 @media (min-width: 1025px) {
     header {
-        font-size: 24px;
-        padding: 20px;
+        font-size: 26px;
+        padding: 25px;
     }
 
     section {
@@ -220,18 +271,18 @@ canvas {
     }
 
     .btn {
-        padding: 12px 20px;
-        font-size: 18px;
+        padding: 14px 24px;
+        font-size: 20px;
     }
 
     #record-list li {
-        font-size: 18px;
-        padding: 15px;
+        font-size: 20px;
+        padding: 18px;
     }
 
     #charts {
         width: 90%;
-        padding: 20px;
+        padding: 25px;
     }
 
     #categoryChart, #dailyChart {

@@ -215,6 +215,9 @@ input:focus {
     border-radius: 15px;
     box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
     transition: transform 0.3s ease-in-out;
+    width: auto; /* 確保圖表維持原始比例 */
+    height: auto; /* 確保圖表維持原始比例 */
+    max-width: 100%; /* 讓圖表最大寬度不超過容器 */
 }
 
 #categoryChart:hover, #dailyChart:hover {

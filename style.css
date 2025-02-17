@@ -205,21 +205,19 @@ input:focus {
     gap: 40px; /* 圖表間距 */
     padding: 20px;
     width: 95%; /* 區塊寬度 */
-    max-width: 1200px; /* 最大寬度 */
-    min-width: 320px; /* 為行動裝置設定較小的最小寬度 */
+    max-width: 1400px; /* 提升最大寬度，讓內部圖表有更多空間 */
     background: rgba(255, 255, 255, 0.8);
     border-radius: 20px;
     box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
-    /* 移除固定的 min-height 與 max-height，讓區塊高度隨內部內容調整 */
 }
 
-/* 調整圖表尺寸，採用 16:9 比例 */
+/* 調整圖表尺寸，採用 16:9 比例並加寬 */
 #categoryChart, #dailyChart {
     flex: 1;
-    width: 100%;            /* 填滿父容器 */
-    max-width: 500px;       /* 限制最大寬度 */
-    min-width: 250px;
-    aspect-ratio: 16 / 9;   /* 維持 16:9 的比例 */
+    width: 100%;
+    max-width: 700px;    /* 將最大寬度由 500px 提升至 700px */
+    min-width: 300px;
+    aspect-ratio: 16 / 9; /* 保持 16:9 的最佳觀看比例 */
     border-radius: 15px;
     box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
     transition: transform 0.3s ease-in-out;
@@ -241,7 +239,7 @@ input:focus {
 
     #categoryChart, #dailyChart {
         max-width: 100%;
-        min-width: 200px;
+        min-width: 250px;
     }
 }
 
@@ -253,7 +251,7 @@ input:focus {
     }
 
     #categoryChart, #dailyChart {
-        max-width: 400px;
+        max-width: 600px;
     }
 }
 
@@ -265,6 +263,6 @@ input:focus {
     }
 
     #categoryChart, #dailyChart {
-        max-width: 500px;
+        max-width: 700px;
     }
 }

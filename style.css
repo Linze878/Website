@@ -204,7 +204,7 @@ input:focus {
     gap: 30px;
     padding: 30px;
     width: 90%;
-    max-width: 400px;
+    max-width: 1000px;
     min-height: 500px;
     background: rgba(255, 255, 255, 0.8);
     border-radius: 20px;

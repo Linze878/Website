@@ -200,14 +200,14 @@ input:focus {
 #charts {
     display: flex;
     flex-direction: row;
-    justify-content: space-between;
+    justify-content: center; /* 讓圖表區塊置中 */
     align-items: center;
-    gap: 30px;
+    gap: 40px; /* 增加圖表間距 */
     padding: 20px;
-    width: 90%; /* 讓區塊更寬 */
-    max-width: 1000px; /* 確保區塊足夠寬 */
+    width: 95%; /* 讓區塊更寬 */
+    max-width: 1200px; /* 增加最大寬度 */
     min-height: 200px; /* 降低最小高度 */
-    max-height: 300px; /* 限制最高不超過 300px */
+    max-height: 280px; /* 限制最高不超過 280px */
     background: rgba(255, 255, 255, 0.8);
     border-radius: 20px;
     box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
@@ -216,9 +216,10 @@ input:focus {
 /* 調整圖表尺寸 */
 #categoryChart, #dailyChart {
     flex: 1;
-    max-width: 48%; /* 圖表更寬一些 */
-    height: auto; /* 讓高度隨比例縮放 */
-    max-height: 250px; /* 限制圖表最大高度，避免被拉太長 */
+    width: 100%; /* 讓圖表填滿父元素 */
+    max-width: 500px; /* 進一步增加圖表最大寬度 */
+    height: auto;
+    max-height: 230px; /* 控制最大高度，防止變形 */
     border-radius: 15px;
     box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
     transition: transform 0.3s ease-in-out;

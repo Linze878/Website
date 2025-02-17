@@ -206,18 +206,19 @@ input:focus {
     padding: 20px;
     width: 95%; /* 區塊寬度 */
     max-width: 1200px; /* 最大寬度 */
+    min-width: 400px;
     background: rgba(255, 255, 255, 0.8);
     border-radius: 20px;
     box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
 }
 
-/* 調整圖表尺寸：保留原本寬度設定，改用 aspect-ratio 來延長高度 */
+/* 調整圖表尺寸：保留原本寬度設定，僅延長高度 */
 #categoryChart, #dailyChart {
     flex: 1;
-    width: 100%;            
-    max-width: 500px;       /* 寬度恢復原本設定 */
+    width: 100%;
+    max-width: 500px;   /* 寬度設定回原本數值 */
     min-width: 250px;
-    /* 將比例由 16:9 (約 1.78) 改為 16:10 (1.6) 以增加高度 */
+    /* 將比例從 16:9 改為 16:10，以延長高度 */
     aspect-ratio: 16 / 10;  
     border-radius: 15px;
     box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);

@@ -204,7 +204,7 @@ input:focus {
     gap: 30px;
     padding: 30px;
     width: 90%;
-    max-width: 1000px;
+    max-width: 500px;
     min-height: 600px;
     background: rgba(255, 255, 255, 0.8);
     border-radius: 20px;
@@ -226,8 +226,8 @@ input:focus {
 
 /* 響應式設計 */
 
-/* 手機 (最大寬度 768px) */
-@media (max-width: 768px) {
+/* 手機 */
+@media (max-width: 768px) and (min-height: 1024px) {
     header {
         font-size: 22px;
         padding: 18px;
@@ -263,8 +263,8 @@ input:focus {
     }
 }
 
-/* 平板（768px 到 1024px） */
-@media (min-width: 768px) and (max-width: 1024px) {
+/* 平板 */
+@media (min-width: 400px) and (max-width: 500px) and (min-height: 1024px) {
     header {
         font-size: 24px;
         padding: 20px;
@@ -294,8 +294,8 @@ input:focus {
     }
 }
 
-/* 桌面（最小寬度 1025px） */
-@media (min-width: 1025px) {
+/* 桌面 */
+@media (min-width: 500px) and (min-height: 1024px) {
     header {
         font-size: 26px;
         padding: 25px;

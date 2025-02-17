@@ -1,4 +1,3 @@
-/* 頁面背景：漸變色讓畫面更現代 */
 body {
     font-family: "Microsoft JhengHei", sans-serif;
     margin: 0;
@@ -25,7 +24,6 @@ main {
     padding: 20px;
 }
 
-/* 卡片風格的區塊 */
 section {
     background: white;
     width: 90%;
@@ -137,4 +135,105 @@ canvas {
     border: 1px solid #ccc;
     border-radius: 10px;
     background: white;
+}
+
+/* 響應式設計 */
+
+/* 手機 (最大寬度 768px) */
+@media (max-width: 768px) {
+    header {
+        font-size: 20px;
+        padding: 15px;
+    }
+
+    section {
+        width: 95%;
+    }
+
+    .btn {
+        width: 100%;
+        padding: 10px;
+        font-size: 16px;
+    }
+
+    #record-list li {
+        font-size: 16px;
+        padding: 12px;
+    }
+
+    #charts {
+        width: 100%;
+        padding: 10px;
+    }
+
+    #categoryChart, #dailyChart {
+        width: 100% !important;
+        height: auto !important;
+    }
+
+    canvas {
+        width: 100%;
+    }
+}
+
+/* 平板（768px 到 1024px） */
+@media (min-width: 768px) and (max-width: 1024px) {
+    header {
+        font-size: 22px;
+        padding: 18px;
+    }
+
+    section {
+        width: 85%;
+    }
+
+    .btn {
+        padding: 12px 18px;
+        font-size: 17px;
+    }
+
+    #record-list li {
+        font-size: 17px;
+        padding: 14px;
+    }
+
+    #charts {
+        width: 90%;
+        padding: 15px;
+    }
+
+    #categoryChart, #dailyChart {
+        width: 80% !important;
+    }
+}
+
+/* 桌面（最小寬度 1025px） */
+@media (min-width: 1025px) {
+    header {
+        font-size: 24px;
+        padding: 20px;
+    }
+
+    section {
+        width: 60%;
+    }
+
+    .btn {
+        padding: 12px 20px;
+        font-size: 18px;
+    }
+
+    #record-list li {
+        font-size: 18px;
+        padding: 15px;
+    }
+
+    #charts {
+        width: 90%;
+        padding: 20px;
+    }
+
+    #categoryChart, #dailyChart {
+        width: 350px !important;
+    }
 }

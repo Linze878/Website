@@ -206,6 +206,7 @@ input:focus {
     padding: 20px;
     width: 95%; /* 讓區塊更寬 */
     max-width: 1200px; /* 增加最大寬度 */
+    min-width: 400px;
     min-height: 200px; /* 降低最小高度 */
     max-height: 280px; /* 限制最高不超過 280px */
     background: rgba(255, 255, 255, 0.8);
@@ -218,6 +219,7 @@ input:focus {
     flex: 1;
     width: 100%; /* 讓圖表填滿父元素 */
     max-width: 500px; /* 進一步增加圖表最大寬度 */
+    min-width: 250px;
     height: auto;
     max-height: 230px; /* 控制最大高度，防止變形 */
     border-radius: 15px;

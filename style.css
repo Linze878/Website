@@ -205,8 +205,8 @@ input:focus {
     align-items: center; /* 垂直置中 */
     gap: 30px; /* 兩圖表之間的距離 */
     padding: 30px;
-    width: 90%;
-    max-width: 1000px;
+    width: 60%;
+    max-width: 400px;
     min-height: 300px;
     background: rgba(255, 255, 255, 0.8);
     border-radius: 20px;
@@ -252,12 +252,12 @@ input:focus {
     }
 
     #charts {
-        width: 100%;
+        width: 60%;
         padding: 15px;
     }
 
     #categoryChart, #dailyChart {
-        width: 100% !important;
+        width: auto !important;
         height: auto !important;
     }
 
@@ -274,7 +274,7 @@ input:focus {
     }
 
     section {
-        width: 85%;
+        width: 60%;
     }
 
     .btn {
@@ -288,7 +288,7 @@ input:focus {
     }
 
     #charts {
-        width: 90%;
+        width: 60%;
         padding: 20px;
     }
 
@@ -319,7 +319,7 @@ input:focus {
     }
 
     #charts {
-        width: 90%;
+        width: 60%;
         padding: 25px;
     }
 

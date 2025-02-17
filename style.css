@@ -216,12 +216,16 @@ input:focus {
 /* 調整圖表尺寸 */
 #categoryChart, #dailyChart {
     flex: 1;
-    max-width: 45%;
+    max-width: 48%; /* 圖表更寬一些 */
     height: auto; /* 讓高度隨比例縮放 */
     max-height: 250px; /* 限制圖表最大高度，避免被拉太長 */
     border-radius: 15px;
     box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
     transition: transform 0.3s ease-in-out;
+}
+
+#categoryChart:hover, #dailyChart:hover {
+    transform: scale(1.05); /* 懸停時稍微放大 */
 }
 
 /* 響應式設計 */

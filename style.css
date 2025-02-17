@@ -2,18 +2,20 @@ body {
     font-family: "Microsoft JhengHei", sans-serif;
     margin: 0;
     padding: 0;
-    background: linear-gradient(135deg, #89f7fe, #66a6ff);
+    background: linear-gradient(135deg, #B2DFF7, #A4C6E7); /* 柔和的藍綠漸變 */
+    color: #333; /* 深灰色文字 */
 }
 
 /* 頁首設計 */
 header {
-    background: rgba(0, 0, 0, 0.636);
+    background: rgba(22, 32, 53, 0.85); /* 深藍色背景 */
     color: white;
     padding: 20px;
     text-align: center;
     font-size: 24px;
     font-weight: bold;
-    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.3);
+    border-bottom: 2px solid #fff; /* 增加頁首分隔線 */
 }
 
 /* 主要區塊 */
@@ -22,87 +24,91 @@ main {
     flex-direction: column;
     align-items: center;
     padding: 20px;
-}
-
-section {
-    background: white;
-    width: 90%;
-    max-width: 600px;
-    padding: 20px;
-    margin: 20px 0;
-    border-radius: 15px;
-    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
-    text-align: center;
+    background: rgba(255, 255, 255, 0.9); /* 微透明白色 */
 }
 
 /* 輸入框美化 */
 input {
     width: 90%;
-    padding: 10px;
-    margin: 10px 0;
-    border: 2px solid #66a6ff;
-    border-radius: 8px;
+    padding: 12px;
+    margin: 12px 0;
+    border: 2px solid #A4C6E7; /* 淺藍色邊框 */
+    border-radius: 10px;
     font-size: 16px;
-    transition: 0.3s;
+    transition: all 0.3s ease-in-out;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
 }
 
 input:focus {
-    border-color: #007bff;
+    border-color: #007bff; /* 藍色焦點邊框 */
     outline: none;
     box-shadow: 0 0 8px rgba(0, 123, 255, 0.5);
 }
 
 /* 按鈕美化 */
 .btn {
-    background: #007bff;
+    background: #4A90E2; /* 柔和的藍色 */
     color: white;
-    padding: 12px 20px;
+    padding: 14px 22px;
     font-size: 18px;
     border: none;
     border-radius: 8px;
     cursor: pointer;
     transition: all 0.3s ease-in-out;
+    box-shadow: 0 2px 6px rgba(0, 0, 0, 0.2);
 }
 
 .btn:hover {
-    background: #0056b3;
-    transform: scale(1.1);
-    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.3);
+    background: #357ABD; /* 懸停時更深的藍色 */
+    transform: scale(1.05);
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.3);
 }
 
 /* 記帳紀錄列表 */
 #record-list {
     list-style: none;
     padding: 0;
-    text-align: left;
+    width: 100%;
+    max-width: 600px;
 }
 
 #record-list li {
-    background: #fff;
-    padding: 15px;
-    margin: 10px 0;
-    border-radius: 8px;
-    border-left: 5px solid #007bff;
+    background: #f9f9f9; /* 淺灰色背景 */
+    padding: 16px;
+    margin: 12px 0;
+    border-radius: 10px;
+    border-left: 5px solid #4A90E2; /* 深藍色邊框 */
     font-size: 18px;
     display: flex;
     justify-content: space-between;
     align-items: center;
     box-shadow: 0 2px 6px rgba(0, 0, 0, 0.1);
+    transition: transform 0.3s ease-in-out;
+}
+
+#record-list li:hover {
+    transform: scale(1.02);
+}
+
+#record-list li .record-icon {
+    margin-right: 10px;
+    font-size: 24px;
+    color: #4A90E2; /* 同樣的藍色 */
 }
 
 /* 刪除按鈕 */
 .delete-btn {
-    background-color: red;
+    background-color: #D9534F; /* 紅色 */
     color: white;
     border: none;
-    padding: 5px 10px;
+    padding: 5px 12px;
     cursor: pointer;
     border-radius: 5px;
-    transition: 0.3s;
+    transition: all 0.3s ease-in-out;
 }
 
 .delete-btn:hover {
-    background-color: darkred;
+    background-color: #C9302C; /* 懸停時更深的紅色 */
     transform: scale(1.1);
 }
 
@@ -115,18 +121,13 @@ input:focus {
     padding: 20px;
     width: 90%;
     max-width: 1000px;
-    min-height: 600px;  /* 增加最小高度，確保有足夠空間顯示內容 */
+    min-height: 600px;
     color: #333;
 }
 
-#categoryChart {
-    width: 350px !important;
-    height: 350px !important;
-}
-
-#dailyChart {
-    width: 600px !important; /* 放大長條圖 */
-    height: 300px !important;
+#categoryChart, #dailyChart {
+    border-radius: 10px;
+    box-shadow: 0 2px 6px rgba(0, 0, 0, 0.15);
 }
 
 canvas {
@@ -207,7 +208,7 @@ canvas {
     }
 }
 
-/* 桌面（最小寬度 1025px） */
+/* 桌機（最小寬度 1025px） */
 @media (min-width: 1025px) {
     header {
         font-size: 24px;

@@ -204,8 +204,8 @@ input:focus {
     gap: 30px;
     padding: 30px;
     width: 90%;
-    max-width: 500px;
-    min-height: 600px;
+    max-width: 400px;
+    min-height: 500px;
     background: rgba(255, 255, 255, 0.8);
     border-radius: 20px;
     box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
@@ -227,7 +227,7 @@ input:focus {
 /* 響應式設計 */
 
 /* 手機 */
-@media (max-width: 768px) and (min-height: 1024px) {
+@media (max-width: 350px) and (min-height: 500px) {
     header {
         font-size: 22px;
         padding: 18px;
@@ -238,7 +238,7 @@ input:focus {
     }
 
     .btn {
-        width: 100%;
+        width: 60%;
         padding: 12px;
         font-size: 16px;
     }
@@ -255,7 +255,6 @@ input:focus {
 
     #categoryChart, #dailyChart {
         width: 100% !important;
-        height: auto !important;
     }
 
     canvas {
@@ -285,17 +284,17 @@ input:focus {
     }
 
     #charts {
-        width: 90%;
+        width: 75%;
         padding: 20px;
     }
 
     #categoryChart, #dailyChart {
-        width: 80% !important;
+        width: 60% !important;
     }
 }
 
 /* 桌面 */
-@media (min-width: 500px) and (min-height: 1024px) {
+@media (min-width: 300px) and (min-height: 300px) {
     header {
         font-size: 26px;
         padding: 25px;
@@ -316,7 +315,7 @@ input:focus {
     }
 
     #charts {
-        width: 90%;
+        width: 75%;
         padding: 25px;
     }
 

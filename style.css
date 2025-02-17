@@ -232,7 +232,7 @@ input:focus {
 /* 響應式調整 */
 
 /* 手機 (最大寬度 768px) */
-@media (max-width: 768px) {
+@media (max-width: 300px) {
     #charts {
         width: 90%;
         padding: 15px;
@@ -246,7 +246,7 @@ input:focus {
 }
 
 /* 平板 (768px 到 1024px) */
-@media (min-width: 768px) and (max-width: 1024px) {
+@media (min-width: 300px) and (max-width: 500px) {
     #charts {
         width: 80%;
         padding: 20px;
@@ -258,7 +258,7 @@ input:focus {
 }
 
 /* 桌面 (最小寬度 1025px) */
-@media (min-width: 1025px) {
+@media (min-width: 500px) {
     #charts {
         width: 70%;
         padding: 25px;

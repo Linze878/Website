@@ -200,134 +200,71 @@ input:focus {
 #charts {
     display: flex;
     flex-direction: row;
-    justify-content: center; /* 讓圖表區塊置中 */
+    justify-content: center; /* 置中排列 */
     align-items: center;
-    gap: 40px; /* 增加圖表間距 */
+    gap: 40px; /* 圖表間距 */
     padding: 20px;
-    width: 95%; /* 讓區塊更寬 */
-    max-width: 1200px; /* 增加最大寬度 */
-    min-width: 400px;
-    min-height: 200px; /* 降低最小高度 */
-    max-height: 280px; /* 限制最高不超過 280px */
+    width: 95%; /* 區塊寬度 */
+    max-width: 1200px; /* 最大寬度 */
+    min-width: 320px; /* 為行動裝置設定較小的最小寬度 */
     background: rgba(255, 255, 255, 0.8);
     border-radius: 20px;
     box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+    /* 移除固定的 min-height 與 max-height，讓區塊高度隨內部內容調整 */
 }
 
-/* 調整圖表尺寸 */
+/* 調整圖表尺寸，採用 16:9 比例 */
 #categoryChart, #dailyChart {
     flex: 1;
-    width: 100%; /* 讓圖表填滿父元素 */
-    max-width: 500px; /* 進一步增加圖表最大寬度 */
+    width: 100%;            /* 填滿父容器 */
+    max-width: 500px;       /* 限制最大寬度 */
     min-width: 250px;
-    height: auto;
-    max-height: 230px; /* 控制最大高度，防止變形 */
+    aspect-ratio: 16 / 9;   /* 維持 16:9 的比例 */
     border-radius: 15px;
     box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
     transition: transform 0.3s ease-in-out;
 }
 
 #categoryChart:hover, #dailyChart:hover {
-    transform: scale(1.05); /* 懸停時稍微放大 */
+    transform: scale(1.05); /* 懸停時輕微放大 */
 }
 
-/* 響應式設計 */
+/* 響應式調整 */
 
 /* 手機 (最大寬度 768px) */
 @media (max-width: 768px) {
-    header {
-        font-size: 22px;
-        padding: 18px;
-    }
-
-    section {
-        width: 95%;
-    }
-
-    .btn {
-        width: 100%;
-        padding: 12px;
-        font-size: 16px;
-    }
-
-    #record-list li {
-        font-size: 16px;
-        padding: 14px;
-    }
-
     #charts {
-        width: 60%;
+        width: 90%;
         padding: 15px;
+        gap: 20px;
     }
 
     #categoryChart, #dailyChart {
-        width: auto !important;
-        height: auto !important;
-    }
-
-    canvas {
-        width: 100%;
+        max-width: 100%;
+        min-width: 200px;
     }
 }
 
-/* 平板（768px 到 1024px） */
+/* 平板 (768px 到 1024px) */
 @media (min-width: 768px) and (max-width: 1024px) {
-    header {
-        font-size: 24px;
-        padding: 20px;
-    }
-
-    section {
-        width: 60%;
-    }
-
-    .btn {
-        padding: 14px 20px;
-        font-size: 18px;
-    }
-
-    #record-list li {
-        font-size: 17px;
-        padding: 16px;
-    }
-
     #charts {
-        width: 60%;
+        width: 80%;
         padding: 20px;
     }
 
     #categoryChart, #dailyChart {
-        width: 80% !important;
+        max-width: 400px;
     }
 }
 
-/* 桌面（最小寬度 1025px） */
+/* 桌面 (最小寬度 1025px) */
 @media (min-width: 1025px) {
-    header {
-        font-size: 26px;
-        padding: 25px;
-    }
-
-    section {
-        width: 60%;
-    }
-
-    .btn {
-        padding: 14px 24px;
-        font-size: 20px;
-    }
-
-    #record-list li {
-        font-size: 20px;
-        padding: 18px;
-    }
-
     #charts {
-        width: 60%;
+        width: 70%;
         padding: 25px;
     }
 
     #categoryChart, #dailyChart {
-        width: 350px !important;
+        max-width: 500px;
     }
 }

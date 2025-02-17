@@ -197,27 +197,30 @@ input:focus {
 }
 
 /* 圖表區塊 */
+/* 圖表區塊 */
 #charts {
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    gap: 30px;
+    display: flex; /* 讓兩個圖表水平排列 */
+    flex-direction: row; /* 讓圖表左右排列 */
+    justify-content: space-between; /* 讓兩個圖表左右對齊 */
+    align-items: center; /* 垂直置中 */
+    gap: 30px; /* 兩圖表之間的距離 */
     padding: 30px;
     width: 90%;
     max-width: 1000px;
-    min-height: 600px;
+    min-height: 300px;
     background: rgba(255, 255, 255, 0.8);
     border-radius: 20px;
     box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
 }
 
+/* 單獨調整圖表 */
 #categoryChart, #dailyChart {
+    flex: 1; /* 讓兩個圖表均分寬度 */
+    max-width: 45%; /* 確保圖表不會超過容器的一半 */
+    height: auto; /* 保持原始比例 */
     border-radius: 15px;
     box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
     transition: transform 0.3s ease-in-out;
-    width: auto; /* 確保圖表維持原始比例 */
-    height: auto; /* 確保圖表維持原始比例 */
-    max-width: 100%; /* 讓圖表最大寬度不超過容器 */
 }
 
 #categoryChart:hover, #dailyChart:hover {

@@ -212,8 +212,6 @@ input:focus {
 }
 
 #categoryChart, #dailyChart {
-    width: 300px; /* 設定固定寬度 */
-    height: 300px; /* 設定固定高度，確保比例一致 */
     width: 60%;
     box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
     transition: transform 0.3s ease-in-out;

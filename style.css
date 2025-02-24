@@ -214,11 +214,15 @@ input:focus {
     width: 300px; /* 設定固定寬度 */
     height: 300px; /* 設定固定高度，確保比例一致 */
     border-radius: 50%;
+    width: 60%;
+    min-height: 400px;
     box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
     transition: transform 0.3s ease-in-out;
     display: flex; /* 保證 canvas 可以完整填滿 */
     justify-content: center;
     align-items: center;
+    max-width: 100%; /* 保證容器不會超過可視範圍 */
+    max-height: 100%;
 }
 
 #categoryChart canvas, #dailyChart canvas {

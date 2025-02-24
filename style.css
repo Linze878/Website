@@ -205,6 +205,7 @@ input:focus {
     padding: 30px;
     width: 45%; /* 調整為45% */
     min-height: 400px;
+    min-width: 400px;
     background: rgba(255, 255, 255, 0.8);
     border-radius: 20px;
     box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);

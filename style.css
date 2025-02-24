@@ -308,15 +308,6 @@ input:focus {
         font-size: 17px;
         padding: 16px;
     }
-
-    #charts {
-        width: 45%;
-        padding: 20px;
-    }
-
-    #categoryChart, #dailyChart {
-        width: 60% !important;
-    }
 }
 
 /* 桌面 */
@@ -341,14 +332,5 @@ input:focus {
     #record-list li {
         font-size: 20px;
         padding: 18px;
-    }
-
-    #charts {
-        width: 75%;
-        padding: 25px;
-    }
-
-    #categoryChart, #dailyChart {
-        width: 350px !important;
     }
 }

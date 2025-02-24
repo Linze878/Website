@@ -213,7 +213,6 @@ input:focus {
 #categoryChart, #dailyChart {
     width: 300px; /* 設定固定寬度 */
     height: 300px; /* 設定固定高度，確保比例一致 */
-    border-radius: 50%;
     width: 60%;
     min-height: 400px;
     box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
@@ -225,10 +224,15 @@ input:focus {
     max-height: 100%;
 }
 
-#categoryChart canvas, #dailyChart canvas {
+#categoryChart canvas{
     width: 100% !important;
     height: 100% !important;
     border-radius: 50%;
+}
+
+#dailyChart canvas{
+    width: 100% !important;
+    height: 100% !important;
 }
 
 #categoryChart:hover, #dailyChart:hover {

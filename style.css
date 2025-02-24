@@ -7,6 +7,7 @@ body {
     animation: gradientAnimation 15s ease infinite; /* 背景漸變動畫 */
     color: #333;
     overflow-x: hidden; /* 防止橫向滾動 */
+    transform-origin: center center; /* 縮放時保持在中心 */
 }
 
 /* 背景漸變動畫 */
@@ -78,9 +79,11 @@ main {
     box-shadow: 0 6px 18px rgba(0, 0, 0, 0.12); /* 加強陰影效果 */
     position: relative;
     overflow: hidden; /* 防止溢出 */
+    transform: scale(1); /* 保持原始比例 */
+    transition: transform 0.3s ease-in-out; /* 缩放過渡效果 */
 }
 
-/* 添加微粒子效果 */
+/* 加入背景動畫特效 */
 main::before {
     content: '';
     position: absolute;
@@ -91,6 +94,20 @@ main::before {
     background: url('https://www.transparenttextures.com/patterns/snow.png'); /* 細微雪花粒子效果 */
     opacity: 0.08; /* 減少粒子強度 */
     pointer-events: none; /* 禁止與粒子區塊互動 */
+    animation: particleEffect 3s infinite linear;
+}
+
+/* 粒子動畫 */
+@keyframes particleEffect {
+    0% {
+        opacity: 0.08;
+    }
+    50% {
+        opacity: 0.12;
+    }
+    100% {
+        opacity: 0.08;
+    }
 }
 
 /* 內部邊框和發光效果 */
@@ -106,7 +123,6 @@ main::after {
     pointer-events: none;
     box-shadow: 0 0 12px rgba(0, 0, 0, 0.15); /* 更細緻的陰影發光 */
 }
-
 
 /* 輸入框美化 */
 input {

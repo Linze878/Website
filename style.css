@@ -68,8 +68,8 @@ header::before {
 /* 主要區塊 */
 main {
     display: flex;
-    flex-direction: column;
-    align-items: center;
+    justify-content: space-between; /* 使主區塊內的內容並排 */
+    align-items: flex-start;
     padding: 30px;
     background: linear-gradient(145deg, #f2f7ff, #d8e3f2); /* 淡藍與淡紫的柔和漸變 */
     background-size: 400% 400%; /* 更大範圍的背景移動 */
@@ -203,8 +203,7 @@ input:focus {
     align-items: center;
     gap: 30px;
     padding: 30px;
-    width: 90%;
-    max-width: 400px;
+    width: 45%; /* 調整為45% */
     min-height: 500px;
     background: rgba(255, 255, 255, 0.8);
     border-radius: 20px;
@@ -228,6 +227,9 @@ input:focus {
 
 /* 手機 */
 @media (max-width: 350px) and (min-height: 500px) {
+    main {
+        flex-direction: column; /* 改為垂直排列 */
+    }
     header {
         font-size: 22px;
         padding: 18px;
@@ -251,6 +253,7 @@ input:focus {
     #charts {
         width: 100%;
         padding: 15px;
+        margin-top: 20px;
     }
 
     #categoryChart, #dailyChart {
@@ -264,6 +267,9 @@ input:focus {
 
 /* 平板 */
 @media (min-width: 400px) and (max-width: 500px) and (min-height: 1024px) {
+    main {
+        flex-direction: row; /* 改為橫向排列 */
+    }
     header {
         font-size: 24px;
         padding: 20px;
@@ -284,7 +290,7 @@ input:focus {
     }
 
     #charts {
-        width: 75%;
+        width: 45%;
         padding: 20px;
     }
 
@@ -295,13 +301,16 @@ input:focus {
 
 /* 桌面 */
 @media (min-width: 300px) and (min-height: 300px) {
+    main {
+        flex-direction: row; /* 改為橫向排列 */
+    }
     header {
         font-size: 26px;
         padding: 25px;
     }
 
     section {
-        width: 60%;
+        width: 45%;
     }
 
     .btn {

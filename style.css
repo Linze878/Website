@@ -211,12 +211,20 @@ input:focus {
 }
 
 #categoryChart, #dailyChart {
-    width: 300px; /* 調整為固定的寬度 */
-    height: 300px; /* 高度和寬度相等，保證圓形 */
-    border-radius: 50%; /* 保證圖表容器是圓形 */
+    width: 300px; /* 設定固定寬度 */
+    height: 300px; /* 設定固定高度，確保比例一致 */
+    border-radius: 50%;
     box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
     transition: transform 0.3s ease-in-out;
-    max-width: 100%;
+    display: flex; /* 保證 canvas 可以完整填滿 */
+    justify-content: center;
+    align-items: center;
+}
+
+#categoryChart canvas, #dailyChart canvas {
+    width: 100% !important;
+    height: 100% !important;
+    border-radius: 50%;
 }
 
 #categoryChart:hover, #dailyChart:hover {

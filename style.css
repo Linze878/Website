@@ -220,8 +220,8 @@ input:focus {
     gap: 30px;
     padding: 30px;
     width: 45%; /* 調整為45% */
-    min-height: 400px;
-    min-width: 400px;
+    min-height: 300px;
+    min-width: 300px;
     background: rgba(255, 255, 255, 0.8);
     border-radius: 20px;
     box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
@@ -240,15 +240,15 @@ input:focus {
 #categoryChart canvas{
     width: 120% !important;
     height: 100% !important;
-    min-height: 250px;
-    min-width: 250px;
+    min-height: 200px;
+    min-width: 200px;
     display: flex; /* 保證 canvas 可以完整填滿 */
     border-radius: 50%;
 }
 
 #dailyChart canvas{
     width: 100%;
-    height: 200px; /* 設置長條圖高度 */
+    height: 150px; /* 設置長條圖高度 */
     background: #f2f7ff; /* 顏色設置 */
     box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
     border-radius: 10px; /* 保持矩形邊角 */
